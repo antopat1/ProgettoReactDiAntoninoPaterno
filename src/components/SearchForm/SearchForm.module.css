@@ -1,0 +1,31 @@
+.searchForm {
+    display: flex;
+    gap: 1px;
+    justify-content: flex-start;
+    margin-right: 365px;
+  }
+  
+  .searchBar {
+    padding: 10px;
+    border: 1px solid rgb(120, 120, 120);
+    border-radius: 3px;
+    margin-right: 10px;
+    padding-left: 50px;
+  }
+  
+
+  .searchButton {
+    padding: 10px;
+    background-color: #567b95;
+    border: 1px solid rgb(50, 104, 145);
+    color: #ffffff;
+    border-radius: 3px;
+  }
+  
+  
+  @media screen and (max-width:430px) {
+    .searchForm {
+      margin-right: 240px;
+    }
+}
+

@@ -1,0 +1,19 @@
+.section {
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    max-width: fit-content;
+}
+
+.section:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    font-size: 10px;
+    color: gray;   
+  }
+
+
+

@@ -1,0 +1,216 @@
+.extraDiv {
+    padding: 10px 15px;
+    position: relative;
+    display: none;
+}
+
+.extraDiv .icon {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    color: black;
+    margin-right: -250px;
+}
+
+.extraDiv .languages {
+    font-size: 10px;
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.extraDiv .languages>* {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.extraDiv .languages>span {
+    font-weight: 900;
+}
+
+.extraDiv .languages>*:hover {
+    background-color: #f7f7f7;
+}
+
+.extraDiv .extraButtonDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+}
+
+.extraDiv .extraButton {
+    padding: 7px 10px;
+    border-radius: 3px;
+    background-color: #567b95;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.navWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 10px 15px;
+}
+
+.navWrapper .searchDiv>.icon:nth-child(2) {
+    display: none;
+}
+
+.navWrapper .empty {
+    width: 15px;
+    height: 15px;
+    visibility: hidden;
+}
+
+.navWrapper .icon {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.navDate {
+    font-size: 12px;
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    position: absolute; /* Imposta la posizione assoluta */
+    top: 50px; /* Altezza arbitraria dal top */
+    z-index: 9999; /* Imposta la profondità dello z-index per garantire che l'elemento sia sopra gli altri contenuti */
+}
+
+.navDate p {
+    margin-top: 10px; /* Imposta il margine superiore del paragrafo a 10px */
+}
+
+.navSections {
+    padding: 15px 15px;
+    gap: 10px;
+    border-bottom: 1px solid #e2e2e2;
+    display: none;
+}
+
+.searchBarDiv {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.searchBarDiv .searchForm {
+    display: flex;
+    gap: 10px;
+    margin-right: 650px;
+    justify-content: center;
+}
+
+.searchBarDiv .searchBar {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid rgb(120, 120, 120);
+    border-radius: 3px;
+    width: 200px;
+}
+
+.searchBarDiv .searchButton {
+    padding: 10px;
+    background-color: #567b95;
+    border: 1px solid rgb(50, 104, 145);
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 431px) and (max-width: 820px) {
+    .navWrapper .icon {
+        margin-right: 150px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .navWrapper {
+        padding-top: 15px;
+    }
+
+    .navWrapper .logo {
+        height: 40px;
+    }
+
+    .navWrapper .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navWrapper .empty {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .extraDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navWrapper {
+        border-bottom: none;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .navWrapper .logo {
+        height: 70px;
+    }
+
+    .navWrapper .icon {
+        display: none;
+    }
+
+    .navDate {
+        font-size: 15px;
+        background-color: transparent;
+        padding: 5px 15px;
+    }
+
+
+    .navSections {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .navDate {
+        display: none;
+    }
+}
+
+
+
+

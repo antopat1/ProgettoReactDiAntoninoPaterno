@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    height: 50vh;
+}
+
+.notFoundDiv .redirect {
+    text-decoration: none;
+    color: #567b95;
+    font-size: 12px;
+}
+
+.notFoundDiv .redirect:hover {
+    color: #0b3655;
+}
+
+.notFoundDiv .notFoundMessage {
+    color: #666;
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 450px;
+}
+
+.notFoundDiv .notFoundForm {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.notFoundDiv .notFoundForm .notFoundBar {
+    border: 1px solid gray;
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+}
+
+.notFoundDiv .notFoundForm .notFoundButton {
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 8px 5px;
+    height: 30px;
+    width: 15%;
+    color: #666;
+}
+
+.hr {
+    margin-bottom: 2px;
+    font-style: italic;
+    border: 0;
+    border-top: 2px solid #090909;
+}
+
+@media screen and (max-width:430px) {
+    
+    .notFoundDiv .notFoundForm {
+        width: 100%;
+    }
+
+    .notFoundDiv .notFoundForm .notFoundBar {
+        width: 50%;
+    }
+    .notFoundDiv .notFoundMessage {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:388px) {
+    .notFoundDiv {
+        margin-left: 240px;
+        
+    }
+    
+    .notFoundDiv .notFoundForm {
+        width: 424px;
+    }
+
+    .notFoundDiv .notFoundForm .notFoundBar {
+        width: 212px;
+    }
+}
+

@@ -1,0 +1,193 @@
+.articleCard {
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.articleCard .articleInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleCard .articleInfo .articleLabel {
+  background-color: #6374bd;
+  border-radius: 10px;
+  text-transform: capitalize;
+  padding: 8px;
+  width: fit-content;
+}
+
+.articleCard .articleInfo .articlePublishedDate {
+  color: #727272;
+}
+
+.articleCard .mainContent {
+  display: grid;
+  gap: 10px;
+}
+
+.articleCard .mainContent .articleText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.articleCard .mainContent .articleText .articleLink {
+  text-decoration: none;
+  color: black;
+}
+
+.articleCard .mainContent .articleText .articleTitle {
+  font-size: 20px;
+}
+
+.articleCard .mainContent .articleText .articleTitle:hover {
+  color: #636262;
+}
+
+.articleCard .mainContent .articleText .articleCreator {
+  color: #727272;
+  font-size: 13px;
+}
+
+.articleCard .mainContent .articleText .articleBody {
+  line-height: 20px;
+}
+
+.articleCard .mainContent .articleImg .img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+}
+
+.articleCard .mainContent .articleImg .copyright {
+  color: #727272;
+  font-size: 10px;
+  float: right;
+  padding-right: 20px;
+}
+
+.hr {
+  margin-bottom: 2px;
+  font-style: italic;
+  border: 0;
+  border-top: 2px solid #090909;
+}
+
+
+@media screen and (max-width: 767.98px) {
+  .articleCard:last-of-type {
+    border-bottom: none;
+  }
+
+  .articleCard:nth-child(3n+1) .articleInfo .articlePublishedDate {
+    display: inline;
+  }
+
+  .articleCard:nth-child(3n+1) .mainContent .articleText .articleTitle {
+    font-size: 24px;
+  }
+
+  .articleCard:nth-child(3n+1) .mainContent .articleText .articleBody {
+    display: inline;
+  }
+
+  .articleCard:nth-child(3n+1) .mainContent .articleImg .img {
+    display: inline;
+  }
+
+  .articleCard:nth-child(3n+1) .mainContent .articleImg .copyright {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .articleCard:nth-child(5n+1) {
+    grid-column: 1/-1;
+  }
+
+  .articleCard:nth-child(5n+1) .articleInfo .articlePublishedDate {
+    display: inline;
+  }
+
+  .articleCard:nth-child(5n+1) .mainContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articleCard:nth-child(5n+1) .mainContent .articleText .articleTitle {
+    font-size: 26px;
+  }
+
+  .articleCard:nth-child(5n+1) .mainContent .articleText .articleBody {
+    display: inline;
+  }
+
+  .articleCard:nth-child(5n+1) .mainContent .articleImg .img {
+    display: inline;
+  }
+
+  .articleCard:nth-child(5n+1) .mainContent .articleImg .copyright {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articleCard:nth-child(4n+1) {
+    grid-column: 1/-1;
+  }
+
+  .articleCard:nth-child(4n+1) .articleInfo .articlePublishedDate {
+    display: inline;
+  }
+
+  .articleCard:nth-child(4n+1) .mainContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articleCard:nth-child(4n+1) .mainContent .articleText .articleTitle {
+    font-size: 28px;
+    max-width: 450px;
+  }
+
+  .articleCard:nth-child(4n+1) .mainContent .articleText .articleBody {
+    display: inline;
+    max-width: 450px;
+  }
+
+  .articleCard:nth-child(4n+1) .mainContent .articleImg .img {
+    display: inline;
+    max-width: 600px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .articleCard:not(:nth-child(4n+1)) .articleInfo {
+    display: none;
+  }
+
+  .articleCard:not(:nth-child(4n+1)) .mainContent .articleText {
+    order: 1;
+  }
+
+  .articleCard:not(:nth-child(4n+1)) .mainContent .articleImg {
+    order: 0;
+  }
+
+  .articleCard:not(:nth-child(4n+1)) .mainContent .articleImg .img {
+    display: inline;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .articleCard:not(:nth-child(4n+1)) .mainContent .articleImg .copyright {
+    display: inline;
+  }
+}
