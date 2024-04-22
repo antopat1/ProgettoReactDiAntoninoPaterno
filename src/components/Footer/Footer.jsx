@@ -25,7 +25,7 @@ export default function Footer() {
           <SectionsLayout showIcon={false}/>
         </div>
         <span className={style.footerThinLine}></span>
-        <p className={style.copyright}>© 2024 | Antonino Paternò</p>
+        <p className={style.copyright}>© 2024 | Antonino Paternò </p>
       </div>
     </footer>
   );
