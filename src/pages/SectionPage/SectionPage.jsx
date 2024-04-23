@@ -1,6 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import { change } from "/src/states/searchBarSlice";
-import { close } from "/src/states/sectionMenuSlice";
 import { useQuery } from "react-query";
 import { useParams, useNavigate } from "react-router-dom";
 import { HashLoader } from "react-spinners";
@@ -11,6 +9,8 @@ import SectionsLayout from "/src/components/SectionsLayout/SectionsLayout";
 import Article from "/src/components/Article/Article";
 import Footer from "/src/components/Footer/Footer";
 import style from "./SectionPage.module.css";
+
+import SearchForm from "../../components/SearchForm/SearchForm";
 
 export default function Section() {
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -64,32 +64,15 @@ export default function Section() {
         <Navbar />
       </header>
       {isOpen ? (
-        <div className={style.searchDiv}>
-          <form
-            className={style.searchForm}
-            onSubmit={(e) => {
-              e.preventDefault();
-              dispatch(close());
-              navigate(`/search/${searchData}`);
-            }}
-          >
-            <input
-              type="text"
-              placeholder="SEARCH"
-              value={searchData}
-              onChange={(e) => dispatch(change(e.target.value))}
-              className={style.searchBar}
-            />
-            <button className={style.searchButton}>GO</button>
-          </form>
-          <div className={style.sectionsDiv}>
-            <h3>Sections</h3>
-            <div className={style.sectionsList}>
-              <SectionsLayout showIcon={false}/>
-            </div>
-          </div>
-          
-        </div>
+         <div className={style.searchDiv}>
+         <SearchForm/>          
+         <div className={style.sectionsDiv}>
+           <h3>Sections Available</h3>
+           <div className={style.sectionsList}>
+             <SectionsLayout showIcon={false} />
+           </div>
+         </div>
+       </div>
       ) : (
         <>
           <hr className={style.hr}/>
